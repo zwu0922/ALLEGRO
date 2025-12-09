@@ -125,7 +125,7 @@ h_elecNoise_fcc = [] # default total noise shield + detector capacitance (withou
                      # Update2025: now trace capa included in all histograms!
                      
 h_elecNoise_all = [] # total noise shield + trace + detector capacitance
-h_elecNoise_withTraceCap = [] # total noise without trace capacitance (as in ATLAS - trace cap. can be neglected): from shield + detector capacitance
+h_elecNoise_withTraceCap = [] # total noise. In 2025 update this is same as above.
 h_elecNoise_shield = []
 h_elecNoise_trace = []
 h_elecNoise_detector = []
@@ -162,7 +162,7 @@ for i in range (0, nLayers):
     h_elecNoise_fcc[i].SetLineColor(line_color_number)
     h_elecNoise_fcc[i].SetLineStyle(line_style_number)
     h_elecNoise_fcc[i].SetBins(nbins, thetaMin, thetaMax)
-    h_elecNoise_fcc[i].SetTitle("Default electronic noise: shield + detector capacitance; #theta; Electronic noise [MeV]")
+    h_elecNoise_fcc[i].SetTitle("Default electronic noise: shield + detector + trace capacitance; #theta; Electronic noise [MeV]")
     h_elecNoise_fcc[i].SetName("h_elecNoise_fcc_"+str(i+1))
 
     h_elecNoise_all.append( TH1F() )
